@@ -1,0 +1,281 @@
+div{
+    display: block;
+    unicode-bidi: isolate;
+}
+
+p{
+    font-family: Inter, sans-serif;
+    line-height: 1.75;
+}
+
+small{
+    font-size: 12px;
+}
+.cardAnime{
+   position: relative;
+    display: inline-flex;
+    padding: 8px;
+    align-items: flex-start;
+    gap: 16px;
+    background: linear-gradient(#121419, #121419) padding-box, linear-gradient(to left, rgba(24, 71, 177, .2), rgba(161, 196, 247, .2)) border-box;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    transition: all .25s ease;
+    overflow: hidden;
+    height: 200px;
+    min-width: 355px;
+    text-decoration: none;
+    color: #DBE6FF;
+    /* max-width: 300px; */
+    /* font-weight:bolder; */
+}
+.cardCover{
+    height: 100%;
+    width: 140px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.coverImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.cardContent{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    max-width: 200px;
+    min-width: 0;
+    flex: 1 1 0;
+    padding: 8px 0 8px 16px;
+    overflow: hidden;
+}
+
+.chip-animeStatus{
+    border: 1px solid #A1C4F7;
+    color: #A1C4F7;
+}
+
+.cardEpisodes{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.cardTitle{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    align-self: stretch;
+    overflow: hidden;
+    color: #DBE6FF;
+    text-overflow: ellipsis;
+    margin: 10px 0;
+    max-width: 180px;
+    line-height: 1.25;
+}
+
+.card-score-ranking{
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+
+}
+
+.card-score > .cardScore , .card-ranking > .cardRanking{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.card-ranking > .cardRanking {
+    gap: unset;
+}
+
+.smallRanking, .smallUsers{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    color: var(#99A8C9);
+    text-overflow: ellipsis;
+}
+
+
+.cardGenre{
+    /* overflow: hidden; */
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    /* overflow: visible !important; */
+}
+
+.chip-animeStatus{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    color: var(#DBE6FF);
+    border-radius: 8px;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.chip-genre , .chip-animeStatus{
+    font-size: 12px;
+    padding: 8px;
+
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    color: #DBE6FF;
+    border-radius: 8px;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    background:#1F2635;
+}
+
+.chip-genre{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    color: #DBE6FF;
+    border-radius: 8px;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+.small-genre{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    align-self: stretch;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+    overflow: hidden;
+}
+.chip-genre-more {
+  position: relative;
+  cursor: pointer;
+}
+
+.chip-genre-tooltip {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: auto;
+  background: #1F2635;
+  color: #DBE6FF;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 8px 12px;
+  z-index: 1;
+  min-width: 100px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.chip-genre-more:hover .chip-genre-tooltip,
+.chip-genre-more:focus .chip-genre-tooltip {
+  display: block;
+}
+
+.chip-genre-tooltip-item {
+  padding: 2px 0;
+}
+.card-flip {
+  perspective: 1000px;
+  width: 355px;
+  height: 200px;
+  position: relative;
+}
+
+.card-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(.4,2,.6,1);
+  transform-style: preserve-3d;
+}
+
+.card-flip.is-flipped .card-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.card-flip-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: visible;
+  background: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  z-index: 1;
+}
+
+.card-flip-front {
+  z-index: 2;
+}
+
+.card-flip-back {
+  background: #1F2635;
+  color: #DBE6FF;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.cardSynopsis {
+  max-height: 160px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.cardSynopsis h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+  color: #A1C4F7;
+}
+
+.cardSynopsis p {
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin: 0;
+}
